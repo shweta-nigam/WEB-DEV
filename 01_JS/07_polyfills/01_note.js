@@ -7,3 +7,4 @@
 
 // The reason why polyfills are not used exclusively is for better functionality and better performance. Native implementations of APIs can do more and are faster than polyfills. 
 
+// -> Other times, polyfills are used to address issues where browsers implement the same features in different ways. (very very rare today!)
