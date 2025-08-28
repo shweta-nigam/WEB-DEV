@@ -98,8 +98,9 @@ if(!Array.prototype.myMap){
  Array.prototype.myMap =  function(callback,thisArg){
   let newArr = []
   for(let i = 0; i < this.length; i++){
-   callback.call(thisArg,this[i],i,this)
-     newArr.push(callback(this[i]))
+//    callback.call(thisArg,this[i],i,this)         // ❌ call it again
+//      newArr.push(callback(this[i]))               // ❌ call it again
+newArr.push(callback.call(thisArg, this[i], i, this));          // ✅ call it once only 
   }
   return newArr
  }
