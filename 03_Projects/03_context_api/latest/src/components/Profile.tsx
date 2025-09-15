@@ -1,0 +1,1 @@
+// how data accessed through context provider 
