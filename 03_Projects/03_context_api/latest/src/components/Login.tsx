@@ -10,7 +10,7 @@ export default function Login() {
 const {setUser} =  useContext(UserContext)  // setUser form value inside context provider
 
   const handleSubmit = (e:any) => {
-    e.preventDefault()
+    e.preventDefault()      // prevent default value as value can go somewhere through url or other thing.
     setUser({username,password})     // sending data using context 
   };
   return (
@@ -22,13 +22,14 @@ const {setUser} =  useContext(UserContext)  // setUser form value inside context
         value={username}
         onChange={(e) => setUsername(e.target.value)}
       />
+      {" "}
       <input
         placeholder="password"
         type="text"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <button onClick={handleSubmit}></button>
+      <button onClick={handleSubmit}>Submit</button>
     </div>
   );
 }
