@@ -1,4 +1,4 @@
-// 19th Sep 2025     // 21st sep 2025 - que2
+// 19th Sep 2025     // 21st sep 2025 - que2    // 25th sep 2025 - que3
 
 //Que1
 // print table 3 times
@@ -45,3 +45,34 @@ function printUpsideTriangle(n){
 }
 
 printUpsideTriangle(130)
+
+
+
+
+
+
+
+function printDiamond(n){
+ let star = ""
+    for (let i = 1; i <= n; i++) {
+       for (let j = 1; j <= i; j++) {
+        star+= "*"  
+       }    
+       star+="\n" 
+    }
+    for (let i = n; i > 1; i--) {
+      for (let j = i; j > 1; j--) {
+       star+= "*"
+      }
+        star+="\n"
+    }
+    return star
+}
+console.log(printDiamond(5))
+
+
+
+// for space , hint:
+//  star += " ".repeat(n - i);  // leading spaces
+// star += "*".repeat(i * 2 - 1); // odd number of stars
+// star += "\n";
